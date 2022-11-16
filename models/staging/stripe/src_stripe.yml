@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: stripe
+    description: A clone of stride database
+    database: dbt-tutorial
+    schema: stripe
+    tables:
+      - name: payment
+        description: A table for all payment records
+        columns: 
+          - name: id 
+            description: Unique id of a payment
+          - name: status
+            description: '{{doc("status")}}'
